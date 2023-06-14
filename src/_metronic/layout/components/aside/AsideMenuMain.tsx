@@ -8,17 +8,17 @@ export function AsideMenuMain() {
     <>
       <AsideMenuItem
         to='/overview'
-        title='Přehled'
+        title='Overview'
         fontIcon='bi-house fs-2'
-        bsTitle={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        bsTitle={intl.formatMessage({id: 'MENU.OVERVIEW.TITLE'})}
         className='py-2'
       />
 
       <AsideMenuItem
         to='/universities'
-        title='Univerzity'
+        title='Universities'
         fontIcon='bi-building fs-2'
-        bsTitle={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        bsTitle={intl.formatMessage({id: 'MENU.UNIVERSITIES.TITLE'})}
         className='py-2'
       />
 
@@ -26,7 +26,7 @@ export function AsideMenuMain() {
         to='/registrations'
         title='Zápisy'
         fontIcon='bi-calendar2-check fs-2'
-        bsTitle={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        bsTitle={intl.formatMessage({id: 'MENU.REGISTRATIONS.TITLE'})}
         className='py-2'
       />
 
@@ -34,7 +34,7 @@ export function AsideMenuMain() {
         to='/notifications'
         title='Oznámení'
         fontIcon='bi-bell fs-2'
-        bsTitle={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        bsTitle={intl.formatMessage({id: 'MENU.NOTIFICATIONS.TITLE'})}
         className='py-2'
       />
 
@@ -42,7 +42,7 @@ export function AsideMenuMain() {
         to='/settings'
         title='Nastavení'
         fontIcon='bi-gear fs-2'
-        bsTitle={intl.formatMessage({id: 'MENU.DASHBOARD'})}
+        bsTitle={intl.formatMessage({id: 'MENU.SETTINGS.TITLE'})}
         className='py-2'
       />
     </>

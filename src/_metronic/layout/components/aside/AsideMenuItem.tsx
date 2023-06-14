@@ -91,10 +91,10 @@ const MenuItem: FC<Props & WithChildren> = ({
                 <span className='menu-icon me-0'>
                   <i className={clsx('bi', fontIcon)}></i>
                 </span>
-                <span className='menu-title'>{title}</span>
+                <span className='menu-title'>{bsTitle ?? title}</span>
               </>
             ) : (
-              <span className='menu-title'>{title}</span>
+              <span className='menu-title'>{bsTitle ?? title}</span>
             )}
           </Link>
           {children}

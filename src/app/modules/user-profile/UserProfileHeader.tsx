@@ -3,9 +3,11 @@ import React from 'react'
 import {KTIcon, toAbsoluteUrl} from '../../../_metronic/helpers'
 import {Link, useLocation} from 'react-router-dom'
 import {Dropdown1} from '../../../_metronic/partials'
+import {useIntl} from 'react-intl'
 
 const UserProfileHeader: React.FC = () => {
   const location = useLocation()
+  const intl = useIntl()
 
   return (
     <div className='card mb-5 mb-xl-10'>
@@ -52,7 +54,7 @@ const UserProfileHeader: React.FC = () => {
                       <div className='fs-2 fw-bolder'>18</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Staggerů</div>
+                    <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.COINS'})}</div>
                   </div>
 
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
@@ -61,7 +63,7 @@ const UserProfileHeader: React.FC = () => {
                       <div className='fs-2 fw-bolder'>75 %</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Míra úspěšnosti</div>
+                    <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.SUCCESS_RATE'})}</div>
                   </div>
 
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
@@ -70,15 +72,15 @@ const UserProfileHeader: React.FC = () => {
                       <div className='fs-2 fw-bolder'>3</div>
                     </div>
 
-                    <div className='fw-bold fs-6 text-gray-400'>Studovaných škol</div>
+                    <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.UNIVERSITY_STUDIED'})}</div>
                   </div>
                 </div>
               </div>
 
               <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                 <div className='d-flex justify-content-between w-100 mt-auto mb-2'>
-                  <span className='fw-bold fs-6 text-gray-400'>Dostupných Staggerů</span>
-                  <span className='fw-bolder fs-6'>18 / 20</span>
+                  <span className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.PROGRESS_BAR.AVAILABLE_COINS'})}</span>
+                  <span className='fw-bolder fs-6'>18 / {process.env.REACT_APP_MAX_COINS}</span>
                 </div>
                 <div className='h-5px mx-3 w-100 bg-light mb-3'>
                   <div
@@ -102,7 +104,7 @@ const UserProfileHeader: React.FC = () => {
                 }
                 to='/overview'
               >
-                Přehled
+                {intl.formatMessage({id: 'PAGE.OVERVIEW.TITLE'})}
               </Link>
             </li>
             <li className='nav-item'>
@@ -113,7 +115,7 @@ const UserProfileHeader: React.FC = () => {
                 }
                 to='/universities'
               >
-                Univerzity
+                {intl.formatMessage({id: 'PAGE.UNIVERSITIES.TITLE'})}
               </Link>
             </li>
             <li className='nav-item'>
@@ -124,7 +126,7 @@ const UserProfileHeader: React.FC = () => {
                 }
                 to='/registrations'
               >
-                Zápisy na termíny
+                {intl.formatMessage({id: 'PAGE.REGISTRATIONS.TITLE'})}
               </Link>
             </li>
             <li className='nav-item'>
@@ -135,7 +137,7 @@ const UserProfileHeader: React.FC = () => {
                 }
                 to='/notifications'
               >
-                Oznámení
+                {intl.formatMessage({id: 'PAGE.NOTIFICATIONS.TITLE'})}
               </Link>
             </li>
             <li className='nav-item'>
@@ -146,7 +148,7 @@ const UserProfileHeader: React.FC = () => {
                 }
                 to='/settings'
               >
-                Nastavení
+                {intl.formatMessage({id: 'PAGE.SETTINGS.TITLE'})}
               </Link>
             </li>
           </ul>

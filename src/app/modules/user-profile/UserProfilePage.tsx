@@ -6,9 +6,13 @@ import {Registrations} from './components/Registrations'
 import {Notifications} from './components/Notifications'
 import {UserProfileHeader} from './UserProfileHeader'
 import {Settings} from './components/settings/Settings'
+import {useIntl} from 'react-intl'
 
-const UserProfilePage = () => (
-  <Routes>
+const UserProfilePage = () => {
+
+  const intl = useIntl()
+
+  return (<Routes>
     <Route
       element={
         <>
@@ -21,7 +25,7 @@ const UserProfilePage = () => (
         path='overview'
         element={
           <>
-            <PageTitle breadcrumbs={[]}>Přehled</PageTitle>
+            <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'PAGE.OVERVIEW.TITLE'})}</PageTitle>
             <Overview />
           </>
         }
@@ -30,7 +34,7 @@ const UserProfilePage = () => (
         path='universities'
         element={
           <>
-            <PageTitle breadcrumbs={[]}>Univerzity</PageTitle>
+            <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'PAGE.UNIVERSITIES.TITLE'})}</PageTitle>
             <Universities />
           </>
         }
@@ -39,7 +43,7 @@ const UserProfilePage = () => (
         path='registrations'
         element={
           <>
-            <PageTitle breadcrumbs={[]}>Zápisy na termíny</PageTitle>
+            <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'PAGE.REGISTRATIONS.TITLE'})}</PageTitle>
             <Registrations />
           </>
         }
@@ -48,7 +52,7 @@ const UserProfilePage = () => (
         path='notifications'
         element={
           <>
-            <PageTitle breadcrumbs={[]}>Oznámení</PageTitle>
+            <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'PAGE.NOTIFICATIONS.TITLE'})}</PageTitle>
             <Notifications />
           </>
         }
@@ -57,14 +61,14 @@ const UserProfilePage = () => (
         path='settings'
         element={
           <>
-            <PageTitle breadcrumbs={[]}>Nastavení</PageTitle>
+            <PageTitle breadcrumbs={[]}>{intl.formatMessage({id: 'PAGE.SETTINGS.TITLE'})}</PageTitle>
             <Settings />
           </>
         }
       />
       <Route index element={<Navigate to='/overview' />} />
     </Route>
-  </Routes>
-)
+  </Routes>)
+}
 
 export default UserProfilePage

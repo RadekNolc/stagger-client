@@ -8,32 +8,12 @@ const languages = [
   {
     lang: 'en',
     name: 'English',
-    flag: toAbsoluteUrl('/media/flags/united-states.svg'),
+    flag: toAbsoluteUrl('/media/flags/united-kingdom.svg'),
   },
   {
-    lang: 'zh',
-    name: 'Mandarin',
-    flag: toAbsoluteUrl('/media/flags/china.svg'),
-  },
-  {
-    lang: 'es',
-    name: 'Spanish',
-    flag: toAbsoluteUrl('/media/flags/spain.svg'),
-  },
-  {
-    lang: 'ja',
-    name: 'Japanese',
-    flag: toAbsoluteUrl('/media/flags/japan.svg'),
-  },
-  {
-    lang: 'de',
-    name: 'German',
-    flag: toAbsoluteUrl('/media/flags/germany.svg'),
-  },
-  {
-    lang: 'fr',
-    name: 'French',
-    flag: toAbsoluteUrl('/media/flags/france.svg'),
+    lang: 'cs',
+    name: 'Čeština',
+    flag: toAbsoluteUrl('/media/flags/czech-republic.svg'),
   },
 ]
 
@@ -55,7 +35,7 @@ const Languages: FC = () => {
             <img
               className='w-15px h-15px rounded-1 ms-2'
               src={currentLanguage?.flag}
-              alt='metronic'
+              alt='flag'
             />
           </span>
         </span>

@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import {Link} from 'react-router-dom'
 import {KTIcon, toAbsoluteUrl} from '../../../helpers'
 import {useLayout} from '../../core'
-import {Header} from './Header'
 import {DefaultTitle} from './page-title/DefaultTitle'
 import {Topbar} from './Topbar'
 
@@ -45,12 +44,7 @@ export function HeaderWrapper() {
         {/* end::Mobile logo */}
 
         {/* begin::Wrapper */}
-        <div className={'d-flex align-items-stretch justify-content-between flex-lg-grow-1'}>
-          {header.menu && (
-            <div className='d-flex align-items-stretch' id='kt_header_nav'>
-              <Header />
-            </div>
-          )}
+        <div className={'d-flex align-items-stretch justify-content-end flex-lg-grow-1'}>
           {header.left === 'page-title' && (
             <div className='d-flex align-items-center' id='kt_header_nav'>
               <DefaultTitle />

@@ -2,7 +2,10 @@
 import clsx from 'clsx'
 import {FC} from 'react'
 import {Link} from 'react-router-dom'
-import {defaultAlerts, defaultLogs, KTIcon, toAbsoluteUrl} from '../../../helpers'
+import {KTIcon, toAbsoluteUrl} from '../../../helpers'
+
+const defaultAlerts: {state: string, icon: string, title: string, description: string, time: string}[] = []
+const defaultLogs: {state: string, code: string, message: string, time: string}[] = []
 
 const HeaderNotificationsMenu: FC = () => (
   <div

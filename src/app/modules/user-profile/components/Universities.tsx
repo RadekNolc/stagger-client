@@ -48,7 +48,6 @@ export function Universities() {
             date='November 10, 2021'
             budget='$284,900.00'
             progress={50}
-            users={[]}
           />
         </div>
 
@@ -63,7 +62,6 @@ export function Universities() {
             date='May 10, 2021'
             budget='$36,400.00'
             progress={30}
-            users={[]}
           />
         </div>
 
@@ -78,7 +76,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={100}
-            users={[]}
           />
         </div>
 
@@ -93,7 +90,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={60}
-            users={[]}
           />
         </div>
 
@@ -108,7 +104,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={40}
-            users={[]}
           />
         </div>
 
@@ -123,7 +118,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={70}
-            users={[]}
           />
         </div>
 
@@ -138,7 +132,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={70}
-            users={[]}
           />
         </div>
 
@@ -153,7 +146,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={10}
-            users={[]}
           />
         </div>
 
@@ -168,7 +160,6 @@ export function Universities() {
             date='Mar 14, 2021'
             budget='$605,100.00'
             progress={100}
-            users={[]}
           />
         </div>
       </div>

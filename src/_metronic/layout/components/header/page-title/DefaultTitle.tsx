@@ -1,8 +1,8 @@
 import {FC, Fragment} from 'react'
 import clsx from 'clsx'
 import {Link} from 'react-router-dom'
-import {useLayout} from '../../../core/LayoutProvider'
-import {usePageData} from '../../../core/PageData'
+import {useLayout} from '../../../core'
+import {usePageData} from '../../../core'
 
 const DefaultTitle: FC = () => {
   const {pageTitle, pageDescription, pageBreadcrumbs} = usePageData()

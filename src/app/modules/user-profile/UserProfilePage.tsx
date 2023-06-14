@@ -3,8 +3,7 @@ import {PageTitle} from '../../../_metronic/layout/core'
 import {Overview} from './components/Overview'
 import {Universities} from './components/Universities'
 import {Registrations} from './components/Registrations'
-import {Documents} from './components/Documents'
-import {Connections} from './components/Connections'
+import {Notifications} from './components/Notifications'
 import {UserProfileHeader} from './UserProfileHeader'
 import {Settings} from './components/settings/Settings'
 
@@ -50,7 +49,7 @@ const UserProfilePage = () => (
         element={
           <>
             <PageTitle breadcrumbs={[]}>Oznámení</PageTitle>
-            <Documents />
+            <Notifications />
           </>
         }
       />

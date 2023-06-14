@@ -1,15 +1,15 @@
-import {useLayout} from '../../core/LayoutProvider'
-import {Toolbar2} from './Toolbar2'
+import {useLayout} from '../../core'
+import {Toolbar1} from './Toolbar1'
 
 const Toolbar = () => {
   const {config} = useLayout()
 
   switch (config.toolbar.layout) {
-    case 'toolbar2':
-      return <Toolbar2 />
+    case 'toolbar1':
+      return <Toolbar1 />
 
     default:
-      return <Toolbar2 />
+      return <Toolbar1 />
   }
 }
 

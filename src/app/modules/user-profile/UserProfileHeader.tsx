@@ -4,10 +4,14 @@ import {KTIcon, toAbsoluteUrl} from '../../../_metronic/helpers'
 import {Link, useLocation} from 'react-router-dom'
 import {Dropdown1} from '../../../_metronic/partials'
 import {useIntl} from 'react-intl'
+import {useAuth} from '../auth'
+import {useUserProfile} from './core/UserProfile'
 
 const UserProfileHeader: React.FC = () => {
   const location = useLocation()
   const intl = useIntl()
+  const {currentUser} = useAuth()
+  const {currentProfile} = useUserProfile()
 
   return (
     <div className='card mb-5 mb-xl-10'>
@@ -24,7 +28,7 @@ const UserProfileHeader: React.FC = () => {
               <div className='d-flex flex-column'>
                 <div className='d-flex align-items-center mb-2'>
                   <span className='text-gray-800 fs-2 fw-bolder me-1'>
-                    Uživatelské jméno
+                    {currentUser?.username}
                   </span>
                 </div>
 
@@ -33,13 +37,13 @@ const UserProfileHeader: React.FC = () => {
                     className='d-flex align-items-center text-gray-400 me-5 mb-2'
                   >
                     <KTIcon iconName='profile-circle' className='fs-4 me-1' />
-                    Role
+                    {currentProfile?.roles.map(role => intl.formatMessage({id: `USER_PROFILE.ROLE.${role}`})).join(',')}
                   </span>
                   <span
                     className='d-flex align-items-center text-gray-400 mb-2'
                   >
                     <KTIcon iconName='sms' className='fs-4 me-1' />
-                    email@example.com
+                    {currentUser?.emailAddress}
                   </span>
                 </div>
               </div>
@@ -51,7 +55,7 @@ const UserProfileHeader: React.FC = () => {
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-up' className='fs-3 text-success me-2' />
-                      <div className='fs-2 fw-bolder'>18</div>
+                      <div className='fs-2 fw-bolder'>{currentProfile?.coins}</div>
                     </div>
 
                     <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.COINS'})}</div>
@@ -60,7 +64,7 @@ const UserProfileHeader: React.FC = () => {
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-down' className='fs-3 text-danger me-2' />
-                      <div className='fs-2 fw-bolder'>75 %</div>
+                      <div className='fs-2 fw-bolder'>WIP</div>
                     </div>
 
                     <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.SUCCESS_RATE'})}</div>
@@ -69,7 +73,7 @@ const UserProfileHeader: React.FC = () => {
                   <div className='border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3'>
                     <div className='d-flex align-items-center'>
                       <KTIcon iconName='arrow-up' className='fs-3 text-success me-2' />
-                      <div className='fs-2 fw-bolder'>3</div>
+                      <div className='fs-2 fw-bolder'>{currentProfile?.universityCount}</div>
                     </div>
 
                     <div className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.INFO_CARD.UNIVERSITY_STUDIED'})}</div>
@@ -80,14 +84,15 @@ const UserProfileHeader: React.FC = () => {
               <div className='d-flex align-items-center w-200px w-sm-300px flex-column mt-3'>
                 <div className='d-flex justify-content-between w-100 mt-auto mb-2'>
                   <span className='fw-bold fs-6 text-gray-400'>{intl.formatMessage({id: 'USER_PROFILE.PROGRESS_BAR.AVAILABLE_COINS'})}</span>
-                  <span className='fw-bolder fs-6'>18 / {process.env.REACT_APP_MAX_COINS}</span>
+                  <span className='fw-bolder fs-6'>{currentProfile?.coins} / {currentProfile?.maxCoins}</span>
                 </div>
                 <div className='h-5px mx-3 w-100 bg-light mb-3'>
                   <div
                     className='bg-success rounded h-5px'
                     role='progressbar'
-                    style={{width: '90%'}}
-                  ></div>
+                    style={{width: currentProfile?.coins ? `${(currentProfile.coins / currentProfile.maxCoins)*100}%` : 0}}
+                      >
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,8 +1,9 @@
-import {useAuth, UserProfileModel} from '../../auth'
+import {useAuth} from '../../auth'
 import {createContext, Dispatch, FC, SetStateAction, useContext, useEffect, useRef, useState} from 'react'
 import {WithChildren} from '../../../../_metronic/helpers'
 import {LayoutSplashScreen} from '../../../../_metronic/layout/core'
 import {getUserProfile} from './_requests'
+import {UserProfileModel} from './_models'
 
 type UserProfileContextProps = {
   currentProfile: UserProfileModel | undefined

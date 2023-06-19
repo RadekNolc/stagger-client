@@ -6,10 +6,13 @@ import {Languages} from './Languages'
 import {toAbsoluteUrl} from '../../../helpers'
 import {useUserNotifications} from '../../../../app/modules/user-profile/core/UserNotifications'
 import {LayoutSplashScreen} from '../../../layout/core'
+import {useIntl} from 'react-intl'
 
 const HeaderUserMenu: FC = () => {
   const {currentUser, logout} = useAuth()
   const {notifications} = useUserNotifications()
+
+  const intl = useIntl()
 
   return (
     <div
@@ -37,25 +40,25 @@ const HeaderUserMenu: FC = () => {
 
       <div className='menu-item px-5'>
         <Link to={'/overview'} className='menu-link px-5'>
-          Přehled
+          {intl.formatMessage({id: "MENU.OVERVIEW.TITLE"})}
         </Link>
       </div>
 
       <div className='menu-item px-5'>
         <Link to={'/universities'} className='menu-link px-5'>
-          Univerzity
+          {intl.formatMessage({id: "MENU.UNIVERSITIES.TITLE"})}
         </Link>
       </div>
 
       <div className='menu-item px-5'>
         <Link to={'/registrations'} className='menu-link px-5'>
-          Zápisy na termíny
+          {intl.formatMessage({id: "MENU.REGISTRATIONS.TITLE"})}
         </Link>
       </div>
 
       <div className='menu-item px-5'>
         <Link to={'/notifications'} className='menu-link px-5'>
-          <span className='menu-text'>Oznámení</span>
+          <span className='menu-text'>{intl.formatMessage({id: "MENU.NOTIFICATIONS.TITLE"})}</span>
           <span className='menu-badge'>
             <span className='badge badge-light-warning badge-circle fw-bolder fs-7'>{notifications.length ?? 0}</span>
           </span>
@@ -68,13 +71,13 @@ const HeaderUserMenu: FC = () => {
 
       <div className='menu-item px-5 my-1'>
         <Link to='/settings' className='menu-link px-5'>
-          Nastavení
+          {intl.formatMessage({id: "MENU.SETTINGS.TITLE"})}
         </Link>
       </div>
 
       <div className='menu-item px-5'>
         <a onClick={logout} className='menu-link px-5'>
-          Odhlásit se
+          {intl.formatMessage({id: "MENU.LOGOUT.TITLE"})}
         </a>
       </div>
     </div>

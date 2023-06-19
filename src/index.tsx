@@ -21,6 +21,7 @@ import './_metronic/assets/sass/style.react.scss'
 import {AppRoutes} from './app/routing/AppRoutes'
 import {AuthProvider, setupAxios} from './app/modules/auth'
 import {UserProfileProvider} from './app/modules/user-profile/core/UserProfile'
+import {UserNotificationsProvider} from './app/modules/user-profile/core/UserNotifications'
 /**
  * Creates `axios-mock-adapter` instance for provided `axios` instance, add
  * basic Metronic mocks and returns it.
@@ -43,7 +44,9 @@ if (container) {
       <MetronicI18nProvider>
         <AuthProvider>
           <UserProfileProvider>
-            <AppRoutes />
+            <UserNotificationsProvider>
+              <AppRoutes />
+            </UserNotificationsProvider>
           </UserProfileProvider>
         </AuthProvider>
       </MetronicI18nProvider>

@@ -18,5 +18,12 @@
   "USER_PROFILE.INFO_CARD.UNIVERSITY_STUDIED": "Studovaných univerzit",
   "USER_PROFILE.PROGRESS_BAR.AVAILABLE_COINS": "Dostupných Staggerů",
   "USER_PROFILE.ROLE.ROLE_USER": "Uživatel",
-  "USER_PROFILE.ROLE.ROLE_ADMIN": "Administrátor"
+  "USER_PROFILE.ROLE.ROLE_ADMIN": "Administrátor",
+
+  "NOTIFICATIONS.MARK_AS_READ": "Označit jako přečtené",
+  "NOTIFICATIONS.CATEGORY.ALERT": "Upozornění",
+  "NOTIFICATIONS.CATEGORY.UPDATE": "Úpravy",
+  "NOTIFICATIONS.CATEGORY.LOG": "Záznamy",
+  "NOTIFICATIONS.VIEW_ALL": "Zobrazit vše",
+  "NOTIFICATIONS.NOTHING": "Vše přečteno"
 }

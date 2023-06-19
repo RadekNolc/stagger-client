@@ -5,6 +5,7 @@ import {LayoutProvider, LayoutSplashScreen} from '../_metronic/layout/core'
 import {MasterInit} from '../_metronic/layout/MasterInit'
 import {AuthInit} from './modules/auth'
 import {UserProfileInit} from './modules/user-profile/core/UserProfile'
+import {UserNotificationsInit} from './modules/user-profile/core/UserNotifications'
 
 const App = () => {
   return (
@@ -13,8 +14,10 @@ const App = () => {
         <LayoutProvider>
           <AuthInit>
             <UserProfileInit>
-              <Outlet />
-              <MasterInit />
+              <UserNotificationsInit>
+                <Outlet />
+                <MasterInit />
+              </UserNotificationsInit>
             </UserProfileInit>
           </AuthInit>
         </LayoutProvider>

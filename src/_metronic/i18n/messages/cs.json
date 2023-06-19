@@ -25,5 +25,9 @@
   "NOTIFICATIONS.CATEGORY.UPDATE": "Úpravy",
   "NOTIFICATIONS.CATEGORY.LOG": "Záznamy",
   "NOTIFICATIONS.VIEW_ALL": "Zobrazit vše",
-  "NOTIFICATIONS.NOTHING": "Vše přečteno"
+  "NOTIFICATIONS.NOTHING": "Vše přečteno",
+
+  "THEME.MODE.LIGHT": "Světlý",
+  "THEME.MODE.DARK": "Tmavý",
+  "THEME.MODE.SYSTEM": "Systémový"
 }

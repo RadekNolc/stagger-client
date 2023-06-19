@@ -25,5 +25,9 @@
   "NOTIFICATIONS.CATEGORY.UPDATE": "Updates",
   "NOTIFICATIONS.CATEGORY.LOG": "Logs",
   "NOTIFICATIONS.VIEW_ALL": "Show all",
-  "NOTIFICATIONS.NOTHING": "Nothing to show"
+  "NOTIFICATIONS.NOTHING": "Nothing to show",
+
+  "THEME.MODE.LIGHT": "Light",
+  "THEME.MODE.DARK": "Dark",
+  "THEME.MODE.SYSTEM": "System"
 }
